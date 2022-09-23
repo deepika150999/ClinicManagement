@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body style="background-color:orange" align="center" onsubmit="myRegisterformvalidation">
+
+    <form action="WelcomePage.html" name="Registrationform" id="Registrationform">
+        <h1>Registration Form</h1>
+        <label>User Name:</label>
+        <input type="text" id="username"  required /><br><br>
+        <label>Email ID:</label>
+        <input type="text" id="emailId"   required/><br><br>
+        <label>Password: </label>
+        <input type="password" id="password"  required /><br><br>
+        <label>Confoirm Password: </label>
+        <input type="password" id="confirmpassword" required /><br><br>
+        <input type="button" value="Submit" onclick="Registerformvalidation()" /><br /><br />
+        <a href="C:\Users\ADMIN\source\repos\WebAppTask1\WebAppTask1\loginPage.html">Continue To LogIn Pages</a>
+        <h4>CLICK HERE, if you have already  registerd</h4>
+    </form>
+
+    <script>
+        function Registerformvalidation() {
+            let Username = document.getElementById("username").value;
+            let emailID = document.getElementById("emailId").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmpassword").value;
+            if (Username == "") {
+                alert("Enter User Name");
+            }
+            else if (emailID == "") {
+                alert("Enter Email ID");
+            }
+            else if (password == "") {
+                alert("Enter Password");
+            }
+            else if (confirmPassword == "") {
+                alert("Enter Confirmpassword is mandatory");
+            }
+            else if (confirmPassword != password) {
+                alert("It is not match with Password");
+            }
+            else  {
+                document.getElementById("Registrationform").submit();
+            }
+        }</script>
+</body>
+</html>
