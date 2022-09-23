@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <h3>ENTER THE MARKS YOU EARNED....</h3>
+    <table border="1" cellpadding="2" cellspacing="2">
+
+
+        <tr>
+            <td>
+                Tamil
+                <input type="number" id="txt1" onkeyup="marks()" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                English
+                <input type="number" id="txt2" onkeyup="marks()" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Maths
+                <input type="number" id="txt3" onkeyup="marks()" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+               science
+                <input type="number" id="txt4" onkeyup="marks()" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+               social
+                <input type="number" id="txt5" onkeyup="marks()" />
+            </td>
+        </tr>
+
+    </table>
+
+    <lable id="res"></lable>
+    <script>
+
+        $(document).ready(function () {
+            markss();
+        });
+        function marks() {
+            var n1 = $('#txt1').val();
+            if (!n1) {
+                n1 = 0;
+            }
+            var n2 = $('#txt2').val();
+            if (!n2) {
+                n2 = 0;
+            }
+            var n3 = $('#txt3').val();
+            if (!n3) {
+                n3 = 0;
+            }
+
+            var n4 = $('#txt4').val();
+            if (!n4) {
+                n4 = 0;
+            }
+            var n5 = $('#txt5').val();
+            if (!n5) {
+                n5= 0;
+            } sum = Number(n1) + Number(n2)+Number(n3)+Number(n4)+Number(n5);
+            $('#res').html(sum);
+        }
+    </script>
+</body>
+</html>
